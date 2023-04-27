@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ivan
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: onlinechat
+      PGDATA: "/var/lib/postgresql/data/pgdata"
+    volumes:
+      - ./tables:/docker-entrypoint-initdb.d
+      - .:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  php:
+    build: .
+    volumes:
+      - ./:/app
+    working_dir: /app
+    user: '1000:1000'
+    ports:
+      - 8000:8000
+    command: php -S 0.0.0.0:8000 -t /app
+    environment:
+      DATABASE_URL: postgres://postgres:example@db/mydb

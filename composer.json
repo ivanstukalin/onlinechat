@@ -1,0 +1,10 @@
+{
+    "require": {
+        "workerman/workerman": "^4.1",
+        "symfony/orm-pack": "^2.3",
+        "symfony/console": "^6.2"
+    },
+    "require-dev": {
+        "symfony/maker-bundle": "^1.48"
+    }
+}
