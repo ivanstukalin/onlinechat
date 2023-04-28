@@ -47,7 +47,7 @@ $worker->onMessage = function ($connection, $data) use (&$chats, &$chatService):
 
     /** @var Entities\Chat $chat */
     $chat = $chats[$message->chat_id];
-    if (is_null($chat->getUserId()) || is_null($chat->getOperatorId())) {
+    if (is_null($chat?->getUserId()) || is_null($chat?->getOperatorId())) {
         return;
     }
     $connectionToSend = match ($message->type) {

@@ -51,3 +51,15 @@ function getCookie(name) {
     let matches = document.cookie.match(new RegExp("(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"));
     return matches ? decodeURIComponent(matches[1]) : undefined;
 }
+
+function loadOperator(id) {
+    $.get("operator?id=" + id, function(data){
+        let response = JSON.parse(data);
+        if (response.status !== 200) {
+            console.log(response.message);
+            document.getElementById('message-input').hidden = true;
+            return;
+        }
+        operator = JSON.parse(response.body);
+    });
+}

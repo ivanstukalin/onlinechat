@@ -15,9 +15,9 @@ const sound = new Audio("data:audio/wav;base64,//uQRAAAAWMSLwUIYAAsYkXgoQwAEaYLW
 let operator_id = params.get('operator_id');
 if (operator_id === undefined) {
     console.log('Неизвестный оператор')
-    document.getElementById('message-input').hidden = true
+    document.getElementById('message-input').hidden = true;
 } else {
-    loadOperator(operator_id)
+    loadOperator(operator_id);
 }
 
 let chat_id = params.get('chat_id');
@@ -76,23 +76,11 @@ function addMessageToChatBox(message) {
     const messageElement = document.createElement('div');
     const userName       = user !== undefined
         ? user.name + '(Пользователь)'
-        : '(Пользователь)'
+        : '(Пользователь)';
     const contact = message.type !== 'operator' ? userName : 'Вы';
     messageElement.innerText = `${new Date().toLocaleTimeString()} ${contact}: ${message.text}`;
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;
-}
-
-function loadOperator(id) {
-    $.get("operator?id=" + id, function(data){
-        let response = JSON.parse(data);
-        if (response.status !== 200) {
-            console.log(response.message);
-            document.getElementById('message-input').hidden = true;
-            return;
-        }
-        operator = JSON.parse(response.body);
-    });
 }
 
 function loadUserByChat(id) {
@@ -109,8 +97,8 @@ function loadUserByChat(id) {
 function handleSystemMessage(message) {
     switch (message.text) {
         case 'question_closed':
-            document.getElementById('active').hidden = true
-            document.getElementById('done').hidden = false
+            document.getElementById('active').hidden = true;
+            document.getElementById('done').hidden = false;
             break;
         default:
             return;

@@ -40,9 +40,9 @@ socket.addEventListener('error', event => {
 socket.addEventListener('message', event => {
     const message = JSON.parse(event.data);
     sound.play();
-    console.log(message)
+    console.log(message);
     if (message.type === 'system') {
-        handleSystemMessage(message)
+        handleSystemMessage(message);
     } else {
         addMessageToChatBox(message);
     }
@@ -70,7 +70,7 @@ finishButton.addEventListener('click', event => {
         type: 'system'
     };
     socket.send(JSON.stringify(message));
-    finishButton.disabled = true
+    finishButton.disabled = true;
 });
 
 loadMessagesByChat(chat_id)
@@ -79,13 +79,13 @@ function addMessageToChatBox(message) {
     const messageElement = document.createElement('div');
     const operatorName   = operator !== undefined
         ? operator.name + '(Оператор)'
-        : '(Оператор)'
+        : '(Оператор)';
 
     const contact  = message.type === 'operator' ? operatorName : 'Вы';
-    const date     = new Date()
+    const date     = new Date();
     const datetime = message.created_at === undefined
         ? date.toLocaleDateString() + " " + date.toLocaleTimeString()
-        : message.created_at
+        : message.created_at;
 
     messageElement.innerText = `${datetime} ${contact}: ${message.text}`;
     chatBox.appendChild(messageElement);
@@ -103,7 +103,7 @@ function createUser(chatId) {
                 document.cookie = "user_id="+ user.id;
                 location.reload()
             } else {
-                console.log(response.message)
+                console.log(response.message);
             }
         });
 }
@@ -116,7 +116,7 @@ function loadUser(id) {
             createUser(chat_id)
             return;
         }
-        user = JSON.parse(response.body)
+        user = JSON.parse(response.body);
     });
 }
 
@@ -124,18 +124,19 @@ function loadOperatorByChat(id) {
      $.get("chat/operator?id=" + id, function(data) {
         let response = JSON.parse(data)
         if (response.status !== 200) {
-            console.log(response.message)
+            console.log(response.message);
             return;
         }
-        operator = JSON.parse(response.body)
+        operator = JSON.parse(response.body);
+        document.cookie = "operator_id="+ operator.id;
     });
 }
 
 function handleSystemMessage(message) {
     switch (message.text) {
         case 'operator_active':
-            document.getElementById('offline').hidden = true
-            document.getElementById('online').hidden = false
+            document.getElementById('offline').hidden = true;
+            document.getElementById('online').hidden = false;
             break;
         default:
             return;
