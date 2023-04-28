@@ -50,12 +50,14 @@ class Chat
         $this->handleSystemMessage($chat, SystemMessageEnum::OperatorActive->value);
     }
 
-    public function sendMessage(TcpConnection $connection, Models\Message $message): void {
+    public function sendMessage(TcpConnection $connection, Models\Message $message): void
+    {
         $connection->send(json_encode($message));
         echo "Отправил сообщение $message->text, по адресу {$connection->getRemoteIp()}\n";
     }
 
-    public function handleSystemMessage(Entities\Chat $chat, string $text): void {
+    public function handleSystemMessage(Entities\Chat $chat, string $text): void
+    {
         switch ($text) {
             case SystemMessageEnum::OperatorActive->value:
                 $this->sendSystemMessage([
