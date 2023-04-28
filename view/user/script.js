@@ -121,7 +121,7 @@ function loadUser(id) {
 }
 
 function loadOperatorByChat(id) {
-    $.get("chat/operator?id=" + id, function(data) {
+     $.get("chat/operator?id=" + id, function(data) {
         let response = JSON.parse(data)
         if (response.status !== 200) {
             console.log(response.message)

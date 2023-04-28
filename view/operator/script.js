@@ -74,7 +74,10 @@ chatForm.addEventListener('submit', event => {
 
 function addMessageToChatBox(message) {
     const messageElement = document.createElement('div');
-    const contact = message.type !== 'operator' ? user.name + '(Пользователь)' : 'Вы';
+    const userName       = user !== undefined
+        ? user.name + '(Пользователь)'
+        : '(Пользователь)'
+    const contact = message.type !== 'operator' ? userName : 'Вы';
     messageElement.innerText = `${new Date().toLocaleTimeString()} ${contact}: ${message.text}`;
     chatBox.appendChild(messageElement);
     chatBox.scrollTop = chatBox.scrollHeight;
