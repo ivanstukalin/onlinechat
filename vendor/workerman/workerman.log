@@ -130,3 +130,1429 @@ Stack trace:
 2023-04-27 01:00:59 pid:81399 Workerman[worker.php] stopping ...
 2023-04-27 01:00:59 pid:81399 Workerman[worker.php] has been stopped
 2023-04-27 01:01:00 pid:81437 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:14:44 pid:81437 Workerman[worker.php] stopping ...
+2023-04-28 02:14:44 pid:81437 Workerman[worker.php] has been stopped
+2023-04-28 02:14:55 pid:5442 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:19:55 pid:5442 Workerman[worker.php] stopping ...
+2023-04-28 02:19:55 pid:5442 Workerman[worker.php] has been stopped
+2023-04-28 02:19:57 pid:5546 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:37:27 pid:5546 Workerman[worker.php] stopping ...
+2023-04-28 02:37:27 pid:5546 Workerman[worker.php] has been stopped
+2023-04-28 02:37:28 pid:5841 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:40:07 pid:5841 Workerman[worker.php] stopping ...
+2023-04-28 02:40:07 pid:5841 Workerman[worker.php] has been stopped
+2023-04-28 02:40:13 pid:5928 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:42:33 pid:5928 Workerman[worker.php] stopping ...
+2023-04-28 02:42:33 pid:5928 Workerman[worker.php] has been stopped
+2023-04-28 02:42:37 pid:5980 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:44:23 pid:5980 Workerman[worker.php] stopping ...
+2023-04-28 02:44:23 pid:5980 Workerman[worker.php] has been stopped
+2023-04-28 02:44:24 pid:6078 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:46:50 pid:6078 Workerman[worker.php] stopping ...
+2023-04-28 02:46:50 pid:6078 Workerman[worker.php] has been stopped
+2023-04-28 02:46:52 pid:6237 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:48:30 pid:6237 Workerman[worker.php] stopping ...
+2023-04-28 02:48:30 pid:6237 Workerman[worker.php] has been stopped
+2023-04-28 02:48:32 pid:6290 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:57:07 pid:6290 Workerman[worker.php] stopping ...
+2023-04-28 02:57:07 pid:6290 Workerman[worker.php] has been stopped
+2023-04-28 02:57:09 pid:6876 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:57:37 pid:6878 ArgumentCountError: Too few arguments to function {closure}(), 1 passed in /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php on line 2570 and exactly 2 expected in /Users/ivan/Documents/projects/Onlinechat/worker.php:11
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(2570): {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Worker->acceptConnection(Resource id #27)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(32): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 02:57:37 pid:6876 worker[none:6878] exit with status 64000
+2023-04-28 02:58:51 pid:6876 Workerman[worker.php] stopping ...
+2023-04-28 02:58:51 pid:6876 Workerman[worker.php] has been stopped
+2023-04-28 02:58:52 pid:6912 Workerman[worker.php] start in DEBUG mode
+2023-04-28 02:59:27 pid:6912 Workerman[worker.php] stopping ...
+2023-04-28 02:59:27 pid:6912 Workerman[worker.php] has been stopped
+2023-04-28 02:59:57 pid:6977 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:05:33 pid:6977 Workerman[worker.php] stopping ...
+2023-04-28 03:05:33 pid:6977 Workerman[worker.php] has been stopped
+2023-04-28 03:05:48 pid:7179 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:07:04 pid:7179 Workerman[worker.php] stopping ...
+2023-04-28 03:07:04 pid:7179 Workerman[worker.php] has been stopped
+2023-04-28 03:07:06 pid:7231 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:08:06 pid:7232 TypeError: Cannot access offset of type string on string in /Users/ivan/Documents/projects/Onlinechat/worker.php:25
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), '{"text":"\xD0\xBF\xD0\xBE\xD0\xBC...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #31)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(33): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:08:06 pid:7231 worker[none:7232] exit with status 64000
+2023-04-28 03:11:03 pid:7231 Workerman[worker.php] stopping ...
+2023-04-28 03:11:03 pid:7231 Workerman[worker.php] has been stopped
+2023-04-28 03:11:04 pid:7306 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:11:19 pid:7309 TypeError: Cannot access offset of type string on string in /Users/ivan/Documents/projects/Onlinechat/worker.php:23
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), '{"text":"\xD0\x9C\xD0\xBD\xD0\xB5...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #31)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(37): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:11:19 pid:7306 worker[none:7309] exit with status 64000
+2023-04-28 03:11:56 pid:7306 Workerman[worker.php] stopping ...
+2023-04-28 03:11:56 pid:7306 Workerman[worker.php] has been stopped
+2023-04-28 03:11:57 pid:7344 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:12:31 pid:7344 Workerman[worker.php] stopping ...
+2023-04-28 03:12:31 pid:7344 Workerman[worker.php] has been stopped
+2023-04-28 03:12:33 pid:7378 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:12:47 pid:7382 TypeError: Cannot access offset of type string on string in /Users/ivan/Documents/projects/Onlinechat/worker.php:25
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), '{"text":"\xD0\x9F\xD0\xBE\xD0\xBC...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #34)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(39): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:12:48 pid:7378 worker[none:7382] exit with status 64000
+2023-04-28 03:13:45 pid:7378 Workerman[worker.php] stopping ...
+2023-04-28 03:13:45 pid:7378 Workerman[worker.php] has been stopped
+2023-04-28 03:13:46 pid:7426 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:13:59 pid:7427 Error: Cannot use object of type stdClass as array in /Users/ivan/Documents/projects/Onlinechat/worker.php:25
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Object(stdClass))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #31)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(39): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:13:59 pid:7426 worker[none:7427] exit with status 64000
+2023-04-28 03:14:51 pid:7426 Workerman[worker.php] stopping ...
+2023-04-28 03:14:51 pid:7426 Workerman[worker.php] has been stopped
+2023-04-28 03:14:53 pid:7464 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:15:24 pid:7466 Error: Call to a member function connection() on null in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php:1820
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1786): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1578): Illuminate\Database\Eloquent\Model->getConnection()
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1497): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1533): Illuminate\Database\Eloquent\Model->newModelQuery()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1486): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1476): Illuminate\Database\Eloquent\Model->newQuery()
+#6 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(17): Illuminate\Database\Eloquent\Model::query()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(26): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #34)
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#11 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#14 /Users/ivan/Documents/projects/Onlinechat/worker.php(40): Workerman\Worker::runAll()
+#15 {main}
+2023-04-28 03:15:24 pid:7464 worker[none:7466] exit with status 64000
+2023-04-28 03:16:17 pid:7485 Error: Call to a member function connection() on null in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php:1820
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1786): Illuminate\Database\Eloquent\Model::resolveConnection(NULL)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1578): Illuminate\Database\Eloquent\Model->getConnection()
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1497): Illuminate\Database\Eloquent\Model->newBaseQueryBuilder()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1533): Illuminate\Database\Eloquent\Model->newModelQuery()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1486): Illuminate\Database\Eloquent\Model->newQueryWithoutScopes()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1476): Illuminate\Database\Eloquent\Model->newQuery()
+#6 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(17): Illuminate\Database\Eloquent\Model::query()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(26): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #32)
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#11 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#12 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#16 /Users/ivan/Documents/projects/Onlinechat/worker.php(40): Workerman\Worker::runAll()
+#17 {main}
+2023-04-28 03:16:17 pid:7464 worker[none:7485] exit with status 64000
+2023-04-28 03:16:25 pid:7464 Workerman[worker.php] stopping ...
+2023-04-28 03:16:25 pid:7464 Workerman[worker.php] has been stopped
+2023-04-28 03:16:33 pid:7537 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:16:48 pid:7541 PDOException: SQLSTATE[08006] [7] could not translate host name "db" to address: nodename nor servname provided, or not known in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connectors/Connector.php:65
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connectors/Connector.php(65): PDO->__construct('pgsql:host=db;d...', 'ivan', Object(SensitiveParameterValue), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connectors/Connector.php(83): Illuminate\Database\Connectors\Connector->createPdoConnection('pgsql:host=db;d...', 'ivan', 'admin', Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connectors/Connector.php(48): Illuminate\Database\Connectors\Connector->tryAgainIfCausedByLostConnection(Object(PDOException), 'pgsql:host=db;d...', 'ivan', 'admin', Array)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connectors/PostgresConnector.php(35): Illuminate\Database\Connectors\Connector->createConnection('pgsql:host=db;d...', Array, Array)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connectors/ConnectionFactory.php(184): Illuminate\Database\Connectors\PostgresConnector->connect(Array)
+#5 [internal function]: Illuminate\Database\Connectors\ConnectionFactory->Illuminate\Database\Connectors\{closure}()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(1210): call_user_func(Object(Closure))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(1246): Illuminate\Database\Connection->getPdo()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(519): Illuminate\Database\Connection->getReadPdo()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(414): Illuminate\Database\Connection->getPdoForSelect(true)
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(786): Illuminate\Database\Connection->Illuminate\Database\{closure}('select * from "...', Array)
+#11 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(932): Illuminate\Database\Connection->runQueryCallback('select * from "...', Array, Object(Closure))
+#12 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(911): Illuminate\Database\Connection->tryAgainIfCausedByLostConnection(Object(Illuminate\Database\QueryException), 'select * from "...', Array, Object(Closure))
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(755): Illuminate\Database\Connection->handleQueryException(Object(Illuminate\Database\QueryException), 'select * from "...', Array, Object(Closure))
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(405): Illuminate\Database\Connection->run('select * from "...', Array, Object(Closure))
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(2718): Illuminate\Database\Connection->select('select * from "...', Array, true)
+#16 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(2707): Illuminate\Database\Query\Builder->runSelect()
+#17 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(3248): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#18 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(2706): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#19 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(717): Illuminate\Database\Query\Builder->get(Array)
+#20 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(701): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#21 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(17): Illuminate\Database\Eloquent\Builder->get()
+#22 /Users/ivan/Documents/projects/Onlinechat/worker.php(27): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#23 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#24 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #62)
+#25 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#26 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#27 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#28 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#29 /Users/ivan/Documents/projects/Onlinechat/worker.php(41): Workerman\Worker::runAll()
+#30 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[08006] [7] could not translate host name "db" to address: nodename nor servname provided, or not known (Connection: default, SQL: select * from "users" where "id" = 1) in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php:793
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(932): Illuminate\Database\Connection->runQueryCallback('select * from "...', Array, Object(Closure))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(911): Illuminate\Database\Connection->tryAgainIfCausedByLostConnection(Object(Illuminate\Database\QueryException), 'select * from "...', Array, Object(Closure))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(755): Illuminate\Database\Connection->handleQueryException(Object(Illuminate\Database\QueryException), 'select * from "...', Array, Object(Closure))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(405): Illuminate\Database\Connection->run('select * from "...', Array, Object(Closure))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(2718): Illuminate\Database\Connection->select('select * from "...', Array, true)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(2707): Illuminate\Database\Query\Builder->runSelect()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(3248): Illuminate\Database\Query\Builder->Illuminate\Database\Query\{closure}()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(2706): Illuminate\Database\Query\Builder->onceWithColumns(Array, Object(Closure))
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(717): Illuminate\Database\Query\Builder->get(Array)
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(701): Illuminate\Database\Eloquent\Builder->getModels(Array)
+#10 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(17): Illuminate\Database\Eloquent\Builder->get()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(27): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#12 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #62)
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#16 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#17 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#18 /Users/ivan/Documents/projects/Onlinechat/worker.php(41): Workerman\Worker::runAll()
+#19 {main}
+2023-04-28 03:16:48 pid:7537 worker[none:7541] exit with status 64000
+2023-04-28 03:18:21 pid:7537 Workerman[worker.php] stopping ...
+2023-04-28 03:18:21 pid:7537 Workerman[worker.php] has been stopped
+2023-04-28 03:18:58 pid:7722 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:19:10 pid:7726 PDOException: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "type" of relation "messages" does not exist
+LINE 1: ...rt into "messages" ("text", "user_id", "chat_id", "type", "u...
+                                                             ^ in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php:419
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(419): PDOStatement->execute()
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(786): Illuminate\Database\Connection->Illuminate\Database\{closure}('insert into "me...', Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(753): Illuminate\Database\Connection->runQueryCallback('insert into "me...', Array, Object(Closure))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(405): Illuminate\Database\Connection->run('insert into "me...', Array, Object(Closure))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(392): Illuminate\Database\Connection->select('insert into "me...', Array, false)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Processors/PostgresProcessor.php(24): Illuminate\Database\Connection->selectFromWriteConnection('insert into "me...', Array)
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(3341): Illuminate\Database\Query\Processors\PostgresProcessor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into "me...', Array, 'id')
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(1904): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1335): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1300): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1139): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(31): Illuminate\Database\Eloquent\Model->save()
+#12 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #62)
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#16 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#17 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#18 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#19 /Users/ivan/Documents/projects/Onlinechat/worker.php(42): Workerman\Worker::runAll()
+#20 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "type" of relation "messages" does not exist
+LINE 1: ...rt into "messages" ("text", "user_id", "chat_id", "type", "u...
+                                                             ^ (Connection: default, SQL: insert into "messages" ("text", "user_id", "chat_id", "type", "updated_at", "created_at") values (Тест, 1, 4, user, 2023-04-28 03:19:10, 2023-04-28 03:19:10) returning "id") in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php:793
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(753): Illuminate\Database\Connection->runQueryCallback('insert into "me...', Array, Object(Closure))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(405): Illuminate\Database\Connection->run('insert into "me...', Array, Object(Closure))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(392): Illuminate\Database\Connection->select('insert into "me...', Array, false)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Processors/PostgresProcessor.php(24): Illuminate\Database\Connection->selectFromWriteConnection('insert into "me...', Array)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(3341): Illuminate\Database\Query\Processors\PostgresProcessor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into "me...', Array, 'id')
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(1904): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1335): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1300): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1139): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#9 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(31): Illuminate\Database\Eloquent\Model->save()
+#10 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#11 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#12 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #62)
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#16 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#17 /Users/ivan/Documents/projects/Onlinechat/worker.php(42): Workerman\Worker::runAll()
+#18 {main}
+2023-04-28 03:19:10 pid:7722 worker[none:7726] exit with status 64000
+2023-04-28 03:22:04 pid:7722 Workerman[worker.php] stopping ...
+2023-04-28 03:22:04 pid:7722 Workerman[worker.php] has been stopped
+2023-04-28 03:22:06 pid:7844 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:22:45 pid:7847 Error: Call to a member function send() on null in /Users/ivan/Documents/projects/Onlinechat/worker.php:19
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(2570): {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Worker->acceptConnection(Resource id #58)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(45): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:22:45 pid:7844 worker[none:7847] exit with status 64000
+2023-04-28 03:22:55 pid:7844 Workerman[worker.php] stopping ...
+2023-04-28 03:22:55 pid:7844 Workerman[worker.php] has been stopped
+2023-04-28 03:22:56 pid:7893 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:23:13 pid:7895 Error: Call to a member function send() on null in /Users/ivan/Documents/projects/Onlinechat/worker.php:19
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(2570): {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Worker->acceptConnection(Resource id #58)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(45): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:23:13 pid:7893 worker[none:7895] exit with status 64000
+2023-04-28 03:23:18 pid:7893 Workerman[worker.php] stopping ...
+2023-04-28 03:23:18 pid:7893 Workerman[worker.php] has been stopped
+2023-04-28 03:23:19 pid:7925 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:25:13 pid:7927 PDOException: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "type" of relation "messages" does not exist
+LINE 1: ...rt into "messages" ("text", "user_id", "chat_id", "type", "u...
+                                                             ^ in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php:419
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(419): PDOStatement->execute()
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(786): Illuminate\Database\Connection->Illuminate\Database\{closure}('insert into "me...', Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(753): Illuminate\Database\Connection->runQueryCallback('insert into "me...', Array, Object(Closure))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(405): Illuminate\Database\Connection->run('insert into "me...', Array, Object(Closure))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(392): Illuminate\Database\Connection->select('insert into "me...', Array, false)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Processors/PostgresProcessor.php(24): Illuminate\Database\Connection->selectFromWriteConnection('insert into "me...', Array)
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(3341): Illuminate\Database\Query\Processors\PostgresProcessor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into "me...', Array, 'id')
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(1904): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1335): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1300): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1139): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#11 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(31): Illuminate\Database\Eloquent\Model->save()
+#12 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#16 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#17 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#18 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#19 /Users/ivan/Documents/projects/Onlinechat/worker.php(45): Workerman\Worker::runAll()
+#20 {main}
+
+Next Illuminate\Database\QueryException: SQLSTATE[42703]: Undefined column: 7 ERROR:  column "type" of relation "messages" does not exist
+LINE 1: ...rt into "messages" ("text", "user_id", "chat_id", "type", "u...
+                                                             ^ (Connection: default, SQL: insert into "messages" ("text", "user_id", "chat_id", "type", "updated_at", "created_at") values (Тест, 1, 2, user, 2023-04-28 03:25:13, 2023-04-28 03:25:13) returning "id") in /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php:793
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(753): Illuminate\Database\Connection->runQueryCallback('insert into "me...', Array, Object(Closure))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(405): Illuminate\Database\Connection->run('insert into "me...', Array, Object(Closure))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Connection.php(392): Illuminate\Database\Connection->select('insert into "me...', Array, false)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Processors/PostgresProcessor.php(24): Illuminate\Database\Connection->selectFromWriteConnection('insert into "me...', Array)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Query/Builder.php(3341): Illuminate\Database\Query\Processors\PostgresProcessor->processInsertGetId(Object(Illuminate\Database\Query\Builder), 'insert into "me...', Array, 'id')
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Builder.php(1904): Illuminate\Database\Query\Builder->insertGetId(Array, 'id')
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1335): Illuminate\Database\Eloquent\Builder->__call('insertGetId', Array)
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1300): Illuminate\Database\Eloquent\Model->insertAndSetId(Object(Illuminate\Database\Eloquent\Builder), Array)
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/illuminate/database/Eloquent/Model.php(1139): Illuminate\Database\Eloquent\Model->performInsert(Object(Illuminate\Database\Eloquent\Builder))
+#9 /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php(31): Illuminate\Database\Eloquent\Model->save()
+#10 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Controllers\MessageController::create('\xD0\xA2\xD0\xB5\xD1\x81\xD1\x82', 1, 'user')
+#11 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#12 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#13 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#14 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#15 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#16 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#17 /Users/ivan/Documents/projects/Onlinechat/worker.php(45): Workerman\Worker::runAll()
+#18 {main}
+2023-04-28 03:25:13 pid:7925 worker[none:7927] exit with status 64000
+2023-04-28 03:25:53 pid:7925 Workerman[worker.php] stopping ...
+2023-04-28 03:25:53 pid:7925 Workerman[worker.php] stopping ...
+2023-04-28 03:25:53 pid:7925 worker[none:7960] exit with status 1
+2023-04-28 03:25:53 pid:7925 worker[none:7929] exit with status 1
+2023-04-28 03:25:53 pid:7925 worker[none:7928] exit with status 1
+2023-04-28 03:25:53 pid:7925 worker[none:7926] exit with status 1
+2023-04-28 03:25:53 pid:7925 Workerman[worker.php] has been stopped
+2023-04-28 03:26:44 pid:8142 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:52:32 pid:8142 Workerman[worker.php] stopping ...
+2023-04-28 03:52:32 pid:8142 Workerman[worker.php] has been stopped
+2023-04-28 03:52:34 pid:8682 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:53:53 pid:8685 Error: Call to a member function send() on null in /Users/ivan/Documents/projects/Onlinechat/worker.php:19
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(2570): {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Worker->acceptConnection(Resource id #58)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(45): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 03:53:53 pid:8682 worker[none:8685] exit with status 64000
+2023-04-28 03:54:12 pid:8682 Workerman[worker.php] stopping ...
+2023-04-28 03:54:12 pid:8682 Workerman[worker.php] has been stopped
+2023-04-28 03:54:14 pid:8757 Workerman[worker.php] start in DEBUG mode
+2023-04-28 03:59:34 pid:8757 Workerman[worker.php] stopping ...
+2023-04-28 03:59:34 pid:8757 Workerman[worker.php] has been stopped
+2023-04-28 03:59:40 pid:9000 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:01:10 pid:9000 Workerman[worker.php] stopping ...
+2023-04-28 04:01:10 pid:9000 Workerman[worker.php] has been stopped
+2023-04-28 04:01:11 pid:9064 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:04:30 pid:9064 Workerman[worker.php] stopping ...
+2023-04-28 04:04:30 pid:9064 Workerman[worker.php] has been stopped
+2023-04-28 04:04:32 pid:9147 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:06:40 pid:9147 Workerman[worker.php] stopping ...
+2023-04-28 04:06:40 pid:9147 Workerman[worker.php] has been stopped
+2023-04-28 04:06:56 pid:9205 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:08:52 pid:9205 Workerman[worker.php] stopping ...
+2023-04-28 04:08:52 pid:9205 Workerman[worker.php] has been stopped
+2023-04-28 04:08:54 pid:9267 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:35:52 pid:9267 Workerman[worker.php] stopping ...
+2023-04-28 04:35:52 pid:9267 Workerman[worker.php] has been stopped
+2023-04-28 04:35:54 pid:9597 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:36:01 pid:9599 Error: Call to a member function createChat() on null in /Users/ivan/Documents/projects/Onlinechat/worker.php:24
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?user_id=1...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?user_id=1...', Object(Workerman\Connection\TcpConnection))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?user_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#8 /Users/ivan/Documents/projects/Onlinechat/worker.php(58): Workerman\Worker::runAll()
+#9 {main}
+2023-04-28 04:36:01 pid:9597 worker[none:9599] exit with status 64000
+2023-04-28 04:36:50 pid:9601 Error: Call to a member function createChat() on null in /Users/ivan/Documents/projects/Onlinechat/worker.php:24
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#8 /Users/ivan/Documents/projects/Onlinechat/worker.php(58): Workerman\Worker::runAll()
+#9 {main}
+2023-04-28 04:36:50 pid:9597 worker[none:9601] exit with status 64000
+2023-04-28 04:36:57 pid:9597 Workerman[worker.php] stopping ...
+2023-04-28 04:36:57 pid:9597 Workerman[worker.php] has been stopped
+2023-04-28 04:36:58 pid:9635 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:37:01 pid:9638 Error: Call to a member function createChat() on null in /Users/ivan/Documents/projects/Onlinechat/worker.php:24
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#8 /Users/ivan/Documents/projects/Onlinechat/worker.php(58): Workerman\Worker::runAll()
+#9 {main}
+2023-04-28 04:37:01 pid:9635 worker[none:9638] exit with status 64000
+2023-04-28 04:37:51 pid:9635 Workerman[worker.php] stopping ...
+2023-04-28 04:37:51 pid:9635 Workerman[worker.php] has been stopped
+2023-04-28 04:37:53 pid:9676 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:37:55 pid:9679 TypeError: App\Services\Chat::createChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 22 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:19
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(22): App\Services\Chat->createChat('2user_id=1', NULL, Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(54): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 04:37:56 pid:9676 worker[none:9679] exit with status 64000
+2023-04-28 04:40:46 pid:9676 Workerman[worker.php] stopping ...
+2023-04-28 04:40:46 pid:9676 Workerman[worker.php] has been stopped
+2023-04-28 04:40:48 pid:9747 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:43:14 pid:9747 Workerman[worker.php] stopping ...
+2023-04-28 04:43:14 pid:9747 Workerman[worker.php] has been stopped
+2023-04-28 04:43:15 pid:9791 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:43:51 pid:9791 Workerman[worker.php] stopping ...
+2023-04-28 04:43:51 pid:9791 Workerman[worker.php] has been stopped
+2023-04-28 04:43:52 pid:9819 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:44:10 pid:9819 Workerman[worker.php] stopping ...
+2023-04-28 04:44:10 pid:9819 Workerman[worker.php] has been stopped
+2023-04-28 04:44:12 pid:9849 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:44:23 pid:9849 Workerman[worker.php] stopping ...
+2023-04-28 04:44:23 pid:9849 Workerman[worker.php] has been stopped
+2023-04-28 04:44:27 pid:9875 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:45:30 pid:9875 Workerman[worker.php] stopping ...
+2023-04-28 04:45:30 pid:9875 Workerman[worker.php] has been stopped
+2023-04-28 04:45:32 pid:10024 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:46:14 pid:10024 Workerman[worker.php] stopping ...
+2023-04-28 04:46:14 pid:10024 Workerman[worker.php] has been stopped
+2023-04-28 04:46:15 pid:10053 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:46:40 pid:10053 Workerman[worker.php] stopping ...
+2023-04-28 04:46:40 pid:10053 Workerman[worker.php] has been stopped
+2023-04-28 04:46:41 pid:10083 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:46:49 pid:10083 Workerman[worker.php] stopping ...
+2023-04-28 04:46:49 pid:10083 Workerman[worker.php] has been stopped
+2023-04-28 04:46:50 pid:10109 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:47:13 pid:10109 Workerman[worker.php] stopping ...
+2023-04-28 04:47:13 pid:10109 Workerman[worker.php] has been stopped
+2023-04-28 04:47:14 pid:10135 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:47:20 pid:10135 Workerman[worker.php] stopping ...
+2023-04-28 04:47:20 pid:10135 Workerman[worker.php] has been stopped
+2023-04-28 04:47:21 pid:10161 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:47:35 pid:10161 Workerman[worker.php] stopping ...
+2023-04-28 04:47:35 pid:10161 Workerman[worker.php] has been stopped
+2023-04-28 04:47:36 pid:10190 Workerman[worker.php] start in DEBUG mode
+2023-04-28 04:48:33 pid:10190 Workerman[worker.php] stopping ...
+2023-04-28 04:48:33 pid:10190 Workerman[worker.php] has been stopped
+2023-04-28 04:48:38 pid:10230 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:17:14 pid:10230 Workerman[worker.php] stopping ...
+2023-04-28 05:17:14 pid:10230 Workerman[worker.php] has been stopped
+2023-04-28 05:17:20 pid:10725 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:17:35 pid:10725 Workerman[worker.php] stopping ...
+2023-04-28 05:17:35 pid:10725 Workerman[worker.php] has been stopped
+2023-04-28 05:17:41 pid:10759 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:18:13 pid:10759 Workerman[worker.php] stopping ...
+2023-04-28 05:18:13 pid:10759 Workerman[worker.php] has been stopped
+2023-04-28 05:18:14 pid:10787 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:18:50 pid:10787 Workerman[worker.php] stopping ...
+2023-04-28 05:18:50 pid:10787 Workerman[worker.php] has been stopped
+2023-04-28 05:18:51 pid:10819 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:19:27 pid:10819 Workerman[worker.php] stopping ...
+2023-04-28 05:19:27 pid:10819 Workerman[worker.php] has been stopped
+2023-04-28 05:19:29 pid:10848 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:25:28 pid:10848 Workerman[worker.php] stopping ...
+2023-04-28 05:25:28 pid:10848 Workerman[worker.php] has been stopped
+2023-04-28 05:25:30 pid:10919 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:25:37 pid:10920 Error: Typed property App\Entities\Chat::$operatorId must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:43
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(29): App\Services\Chat->setOperator(Object(App\Entities\Chat), 1, Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(55): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:25:37 pid:10919 worker[none:10920] exit with status 64000
+2023-04-28 05:26:19 pid:10919 Workerman[worker.php] stopping ...
+2023-04-28 05:26:19 pid:10919 Workerman[worker.php] has been stopped
+2023-04-28 05:26:20 pid:10949 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:26:27 pid:10950 Error: Typed property App\Entities\Chat::$operatorId must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:43
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(29): App\Services\Chat->setOperator(Object(App\Entities\Chat), 1, Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #103)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(55): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:26:27 pid:10949 worker[none:10950] exit with status 64000
+2023-04-28 05:26:34 pid:10949 Workerman[worker.php] stopping ...
+2023-04-28 05:26:34 pid:10949 Workerman[worker.php] has been stopped
+2023-04-28 05:27:58 pid:11014 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:40:13 pid:11014 Workerman[worker.php] stopping ...
+2023-04-28 05:40:14 pid:11014 Workerman[worker.php] has been stopped
+2023-04-28 05:40:15 pid:11294 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:40:33 pid:11297 TypeError: App\Controllers\MessageController::create(): Argument #3 ($type) must be of type string, array given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 35 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php:15
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(35): App\Controllers\MessageController::create('\xD0\x9F\xD0\xBE\xD0\xBC\xD0\xBE\xD0\xB3\xD0\xB8\xD1\x82\xD0...', 1, Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 05:40:33 pid:11294 worker[none:11297] exit with status 64000
+2023-04-28 05:41:46 pid:11294 Workerman[worker.php] stopping ...
+2023-04-28 05:41:46 pid:11294 Workerman[worker.php] has been stopped
+2023-04-28 05:41:47 pid:11334 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:41:53 pid:11337 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 27 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:29
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(27): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:41:53 pid:11334 worker[none:11337] exit with status 64000
+2023-04-28 05:42:54 pid:11343 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 27 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:29
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(27): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #64)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 05:42:54 pid:11334 worker[none:11343] exit with status 64000
+2023-04-28 05:43:46 pid:11334 Workerman[worker.php] stopping ...
+2023-04-28 05:43:46 pid:11334 Workerman[worker.php] has been stopped
+2023-04-28 05:51:10 pid:11562 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:51:18 pid:11565 App\Exceptions\ChatNotFound: Chat 2 not found. in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:19
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(22): App\Services\Chat->prepareChat(2, 0, Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=2...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=2...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:51:18 pid:11562 worker[none:11565] exit with status 64000
+2023-04-28 05:51:32 pid:11566 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 27 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(27): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:51:32 pid:11562 worker[none:11566] exit with status 64000
+2023-04-28 05:54:04 pid:11562 Workerman[worker.php] stopping ...
+2023-04-28 05:54:04 pid:11562 Workerman[worker.php] has been stopped
+2023-04-28 05:54:06 pid:12171 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:54:17 pid:12175 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 30 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(30): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:54:17 pid:12171 worker[none:12175] exit with status 64000
+2023-04-28 05:55:20 pid:12173 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 30 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(30): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:55:20 pid:12171 worker[none:12173] exit with status 64000
+2023-04-28 05:56:12 pid:12171 Workerman[worker.php] stopping ...
+2023-04-28 05:56:12 pid:12171 Workerman[worker.php] has been stopped
+2023-04-28 05:56:14 pid:12277 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:57:38 pid:12277 Workerman[worker.php] stopping ...
+2023-04-28 05:57:38 pid:12277 Workerman[worker.php] has been stopped
+2023-04-28 05:57:40 pid:12314 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:58:51 pid:12314 Workerman[worker.php] stopping ...
+2023-04-28 05:58:51 pid:12314 Workerman[worker.php] has been stopped
+2023-04-28 05:58:53 pid:12350 Workerman[worker.php] start in DEBUG mode
+2023-04-28 05:59:07 pid:12353 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 28 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(52): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 05:59:07 pid:12350 worker[none:12353] exit with status 64000
+2023-04-28 06:00:57 pid:12350 Workerman[worker.php] stopping ...
+2023-04-28 06:00:57 pid:12350 Workerman[worker.php] has been stopped
+2023-04-28 06:01:14 pid:12492 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:01:57 pid:12492 Workerman[worker.php] stopping ...
+2023-04-28 06:01:57 pid:12492 Workerman[worker.php] has been stopped
+2023-04-28 06:01:59 pid:12527 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:02:04 pid:12528 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 28 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(51): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:02:04 pid:12527 worker[none:12528] exit with status 64000
+2023-04-28 06:02:15 pid:12527 Workerman[worker.php] stopping ...
+2023-04-28 06:02:15 pid:12527 Workerman[worker.php] has been stopped
+2023-04-28 06:02:17 pid:12556 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:02:43 pid:12558 Error: Object of class Workerman\Connection\TcpConnection could not be converted to string in /Users/ivan/Documents/projects/Onlinechat/worker.php:46
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 06:02:43 pid:12556 worker[none:12558] exit with status 64000
+2023-04-28 06:03:35 pid:12556 Workerman[worker.php] stopping ...
+2023-04-28 06:03:35 pid:12556 Workerman[worker.php] has been stopped
+2023-04-28 06:03:42 pid:12600 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:03:51 pid:12601 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 28 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(28): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(52): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:03:51 pid:12600 worker[none:12601] exit with status 64000
+2023-04-28 06:04:01 pid:12600 Workerman[worker.php] stopping ...
+2023-04-28 06:04:01 pid:12600 Workerman[worker.php] has been stopped
+2023-04-28 06:04:07 pid:12630 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:04:14 pid:12634 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 29 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(29): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(52): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:04:14 pid:12630 worker[none:12634] exit with status 64000
+2023-04-28 06:04:25 pid:12630 Workerman[worker.php] stopping ...
+2023-04-28 06:04:25 pid:12630 Workerman[worker.php] has been stopped
+2023-04-28 06:04:27 pid:12659 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:06:18 pid:12659 Workerman[worker.php] stopping ...
+2023-04-28 06:06:18 pid:12659 Workerman[worker.php] has been stopped
+2023-04-28 06:06:19 pid:12713 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:12:09 pid:12713 Workerman[worker.php] stopping ...
+2023-04-28 06:12:09 pid:12713 Workerman[worker.php] has been stopped
+2023-04-28 06:16:43 pid:12928 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:16:46 pid:12931 App\Exceptions\ChatNotFound: Chat 1 not found. in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:19
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(23): App\Services\Chat->prepareChat(1, 1, Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:16:46 pid:12928 worker[none:12931] exit with status 64000
+2023-04-28 06:21:08 pid:12928 Workerman[worker.php] stopping ...
+2023-04-28 06:21:08 pid:12928 Workerman[worker.php] has been stopped
+2023-04-28 06:21:10 pid:13020 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:21:27 pid:13023 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 29 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(29): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:21:27 pid:13020 worker[none:13023] exit with status 64000
+2023-04-28 06:22:09 pid:13020 Workerman[worker.php] stopping ...
+2023-04-28 06:22:09 pid:13020 Workerman[worker.php] has been stopped
+2023-04-28 06:22:10 pid:13054 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:22:16 pid:13057 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 30 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(30): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(54): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:22:16 pid:13054 worker[none:13057] exit with status 64000
+2023-04-28 06:30:12 pid:13054 Workerman[worker.php] stopping ...
+2023-04-28 06:30:12 pid:13054 Workerman[worker.php] has been stopped
+2023-04-28 06:30:13 pid:13229 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:30:37 pid:13230 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 29 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(29): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:30:37 pid:13229 worker[none:13230] exit with status 64000
+2023-04-28 06:33:17 pid:13233 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 29 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(29): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(53): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:33:17 pid:13229 worker[none:13233] exit with status 64000
+2023-04-28 06:33:24 pid:13229 Workerman[worker.php] stopping ...
+2023-04-28 06:33:24 pid:13229 Workerman[worker.php] has been stopped
+2023-04-28 06:33:28 pid:13308 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:33:31 pid:13309 TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /Users/ivan/Documents/projects/Onlinechat/worker.php:23
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#8 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#9 {main}
+2023-04-28 06:33:31 pid:13308 worker[none:13309] exit with status 64000
+2023-04-28 06:33:45 pid:13308 Workerman[worker.php] stopping ...
+2023-04-28 06:33:45 pid:13308 Workerman[worker.php] has been stopped
+2023-04-28 06:33:46 pid:13349 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:33:52 pid:13350 TypeError: App\Services\Chat::setOperator(): Argument #1 ($chat) must be of type App\Entities\Chat, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 27 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:32
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(27): App\Services\Chat->setOperator(NULL, '1', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 06:33:52 pid:13349 worker[none:13350] exit with status 64000
+2023-04-28 06:35:08 pid:13349 Workerman[worker.php] stopping ...
+2023-04-28 06:35:08 pid:13349 Workerman[worker.php] has been stopped
+2023-04-28 06:35:09 pid:13390 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:36:55 pid:13390 Workerman[worker.php] stopping ...
+2023-04-28 06:36:55 pid:13390 Workerman[worker.php] has been stopped
+2023-04-28 06:37:40 pid:13448 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:39:25 pid:13448 Workerman[worker.php] stopping ...
+2023-04-28 06:39:25 pid:13448 Workerman[worker.php] has been stopped
+2023-04-28 06:39:27 pid:13518 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:40:30 pid:13518 Workerman[worker.php] stopping ...
+2023-04-28 06:40:30 pid:13518 Workerman[worker.php] has been stopped
+2023-04-28 06:40:31 pid:13552 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:42:45 pid:13552 Workerman[worker.php] stopping ...
+2023-04-28 06:42:45 pid:13552 Workerman[worker.php] has been stopped
+2023-04-28 06:42:50 pid:13599 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:43:58 pid:13599 Workerman[worker.php] stopping ...
+2023-04-28 06:43:58 pid:13599 Workerman[worker.php] has been stopped
+2023-04-28 06:43:59 pid:13629 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:44:05 pid:13629 Workerman[worker.php] stopping ...
+2023-04-28 06:44:05 pid:13629 Workerman[worker.php] has been stopped
+2023-04-28 06:44:09 pid:13654 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:45:34 pid:13654 Workerman[worker.php] stopping ...
+2023-04-28 06:45:34 pid:13654 Workerman[worker.php] has been stopped
+2023-04-28 06:45:36 pid:13806 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:46:30 pid:13806 Workerman[worker.php] stopping ...
+2023-04-28 06:46:30 pid:13806 Workerman[worker.php] has been stopped
+2023-04-28 06:46:31 pid:13852 Workerman[worker.php] start in DEBUG mode
+2023-04-28 06:46:51 pid:13852 Workerman[worker.php] stopping ...
+2023-04-28 06:46:51 pid:13852 Workerman[worker.php] has been stopped
+2023-04-28 06:46:52 pid:13876 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:01:02 pid:13878 TypeError: App\Services\Chat::sendMessage(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 59 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:49
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(59): App\Services\Chat->sendMessage(NULL, Object(App\Models\Message))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #103)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(66): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 07:01:02 pid:13876 worker[none:13878] exit with status 64000
+2023-04-28 07:02:18 pid:13876 Workerman[worker.php] stopping ...
+2023-04-28 07:02:18 pid:13876 Workerman[worker.php] has been stopped
+2023-04-28 07:02:21 pid:14139 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:02:34 pid:14141 TypeError: App\Services\Chat::sendMessage(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 59 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:49
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(59): App\Services\Chat->sendMessage(NULL, Object(App\Models\Message))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(66): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 07:02:34 pid:14139 worker[none:14141] exit with status 64000
+2023-04-28 07:26:25 pid:14139 Workerman[worker.php] stopping ...
+2023-04-28 07:26:25 pid:14139 Workerman[worker.php] has been stopped
+2023-04-28 07:26:26 pid:14395 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:27:06 pid:14395 Workerman[worker.php] stopping ...
+2023-04-28 07:27:06 pid:14395 Workerman[worker.php] has been stopped
+2023-04-28 07:27:07 pid:14420 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:27:18 pid:14420 Workerman[worker.php] stopping ...
+2023-04-28 07:27:18 pid:14420 Workerman[worker.php] has been stopped
+2023-04-28 07:27:20 pid:14448 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:27:40 pid:14449 TypeError: App\Services\Chat::sendMessage(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 44 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:49
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(44): App\Services\Chat->sendMessage(NULL, Object(App\Models\Message))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(51): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 07:27:40 pid:14448 worker[none:14449] exit with status 64000
+2023-04-28 07:31:28 pid:14448 Workerman[worker.php] stopping ...
+2023-04-28 07:31:28 pid:14448 Workerman[worker.php] has been stopped
+2023-04-28 07:31:29 pid:14635 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:33:59 pid:14635 Workerman[worker.php] stopping ...
+2023-04-28 07:33:59 pid:14635 Workerman[worker.php] has been stopped
+2023-04-28 07:34:01 pid:14697 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:34:23 pid:14698 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:41
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(51): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 07:34:23 pid:14697 worker[none:14698] exit with status 64000
+2023-04-28 07:35:25 pid:14697 Workerman[worker.php] stopping ...
+2023-04-28 07:35:25 pid:14697 Workerman[worker.php] has been stopped
+2023-04-28 07:35:35 pid:14741 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:37:27 pid:14741 Workerman[worker.php] stopping ...
+2023-04-28 07:37:27 pid:14741 Workerman[worker.php] has been stopped
+2023-04-28 07:37:30 pid:14781 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:41:45 pid:14781 Workerman[worker.php] stopping ...
+2023-04-28 07:41:45 pid:14781 Workerman[worker.php] has been stopped
+2023-04-28 07:41:46 pid:14883 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:45:24 pid:14883 Workerman[worker.php] stopping ...
+2023-04-28 07:45:24 pid:14883 Workerman[worker.php] has been stopped
+2023-04-28 07:45:27 pid:14950 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:46:43 pid:14950 Workerman[worker.php] stopping ...
+2023-04-28 07:46:43 pid:14950 Workerman[worker.php] has been stopped
+2023-04-28 07:46:45 pid:15002 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:48:00 pid:15002 Workerman[worker.php] stopping ...
+2023-04-28 07:48:00 pid:15002 Workerman[worker.php] has been stopped
+2023-04-28 07:48:01 pid:15036 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:49:37 pid:15036 Workerman[worker.php] stopping ...
+2023-04-28 07:49:37 pid:15036 Workerman[worker.php] has been stopped
+2023-04-28 07:49:38 pid:15074 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:49:43 pid:15077 TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /Users/ivan/Documents/projects/Onlinechat/worker.php:33
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(2570): {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Worker->acceptConnection(Resource id #59)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(55): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 07:49:43 pid:15074 worker[none:15077] exit with status 64000
+2023-04-28 07:50:10 pid:15075 TypeError: count(): Argument #1 ($value) must be of type Countable|array, null given in /Users/ivan/Documents/projects/Onlinechat/worker.php:33
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(2570): {closure}(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Worker->acceptConnection(Resource id #59)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(55): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 07:50:10 pid:15074 worker[none:15075] exit with status 64000
+2023-04-28 07:50:13 pid:15074 Workerman[worker.php] stopping ...
+2023-04-28 07:50:13 pid:15074 Workerman[worker.php] has been stopped
+2023-04-28 07:50:14 pid:15110 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:50:41 pid:15110 Workerman[worker.php] stopping ...
+2023-04-28 07:50:41 pid:15110 Workerman[worker.php] has been stopped
+2023-04-28 07:50:42 pid:15140 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:53:01 pid:15140 Workerman[worker.php] stopping ...
+2023-04-28 07:53:01 pid:15140 Workerman[worker.php] has been stopped
+2023-04-28 07:53:03 pid:15188 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:54:03 pid:15188 Workerman[worker.php] stopping ...
+2023-04-28 07:54:03 pid:15188 Workerman[worker.php] has been stopped
+2023-04-28 07:54:48 pid:15261 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:55:22 pid:15261 Workerman[worker.php] stopping ...
+2023-04-28 07:55:22 pid:15261 Workerman[worker.php] has been stopped
+2023-04-28 07:55:24 pid:15296 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:55:40 pid:15296 Workerman[worker.php] stopping ...
+2023-04-28 07:55:40 pid:15296 Workerman[worker.php] has been stopped
+2023-04-28 07:55:42 pid:15325 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:57:06 pid:15325 Workerman[worker.php] stopping ...
+2023-04-28 07:57:06 pid:15325 Workerman[worker.php] has been stopped
+2023-04-28 07:57:08 pid:15357 Workerman[worker.php] start in DEBUG mode
+2023-04-28 07:58:56 pid:15357 Workerman[worker.php] stopping ...
+2023-04-28 07:58:56 pid:15357 Workerman[worker.php] has been stopped
+2023-04-28 07:58:58 pid:15405 Workerman[worker.php] start in DEBUG mode
+2023-04-28 08:02:20 pid:15405 Workerman[worker.php] stopping ...
+2023-04-28 08:02:20 pid:15405 Workerman[worker.php] has been stopped
+2023-04-28 08:02:22 pid:15588 Workerman[worker.php] start in DEBUG mode
+2023-04-28 08:29:29 pid:15593 TypeError: App\Services\Chat::sendMessage(): Argument #1 ($connection) must be of type Workerman\Connection\TcpConnection, null given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 50 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:49
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(50): App\Services\Chat->sendMessage(NULL, Object(App\Models\Message))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 08:29:29 pid:15588 worker[none:15593] exit with status 64000
+2023-04-28 08:29:49 pid:15588 Workerman[worker.php] stopping ...
+2023-04-28 08:29:49 pid:15588 Workerman[worker.php] has been stopped
+2023-04-28 08:29:51 pid:15951 Workerman[worker.php] start in DEBUG mode
+2023-04-28 08:31:30 pid:15951 Workerman[worker.php] stopping ...
+2023-04-28 08:31:30 pid:15951 Workerman[worker.php] has been stopped
+2023-04-28 08:31:32 pid:16043 Workerman[worker.php] start in DEBUG mode
+2023-04-28 09:26:17 pid:16043 Workerman[worker.php] stopping ...
+2023-04-28 09:26:17 pid:16043 Workerman[worker.php] has been stopped
+2023-04-28 09:29:15 pid:17654 Workerman[worker.php] start in DEBUG mode
+2023-04-28 09:36:14 pid:17658 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #103)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 09:36:14 pid:17654 worker[none:17658] exit with status 64000
+2023-04-28 09:36:43 pid:17659 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #103)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 09:36:43 pid:17654 worker[none:17659] exit with status 64000
+2023-04-28 09:38:21 pid:17833 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #64)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#8 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#9 {main}
+2023-04-28 09:38:21 pid:17654 worker[none:17833] exit with status 64000
+2023-04-28 09:39:51 pid:17841 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#8 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#9 {main}
+2023-04-28 09:39:51 pid:17654 worker[none:17841] exit with status 64000
+2023-04-28 09:42:53 pid:17654 Workerman[worker.php] stopping ...
+2023-04-28 09:42:53 pid:17654 Workerman[worker.php] has been stopped
+2023-04-28 09:42:55 pid:17960 Workerman[worker.php] start in DEBUG mode
+2023-04-28 09:43:14 pid:17961 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 09:43:14 pid:17960 worker[none:17961] exit with status 64000
+2023-04-28 09:45:18 pid:17960 Workerman[worker.php] stopping ...
+2023-04-28 09:45:18 pid:17960 Workerman[worker.php] has been stopped
+2023-04-28 09:45:19 pid:17999 Workerman[worker.php] start in DEBUG mode
+2023-04-28 09:46:40 pid:17999 Workerman[worker.php] stopping ...
+2023-04-28 09:46:40 pid:17999 Workerman[worker.php] has been stopped
+2023-04-28 09:46:42 pid:18034 Workerman[worker.php] start in DEBUG mode
+2023-04-28 09:46:59 pid:18036 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 09:46:59 pid:18034 worker[none:18036] exit with status 64000
+2023-04-28 10:06:17 pid:18037 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:47
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #107)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(57): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 10:06:17 pid:18034 worker[none:18037] exit with status 64000
+2023-04-28 10:06:31 pid:18034 Workerman[worker.php] stopping ...
+2023-04-28 10:06:31 pid:18034 Workerman[worker.php] has been stopped
+2023-04-28 10:06:32 pid:18366 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:30:29 pid:18366 Workerman[worker.php] stopping ...
+2023-04-28 10:30:29 pid:18366 Workerman[worker.php] has been stopped
+2023-04-28 10:30:31 pid:18730 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:37:56 pid:18735 TypeError: App\Services\Chat::handleSystemMessage(): Argument #1 ($chat) must be of type App\Entities\Chat, Workerman\Connection\TcpConnection given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 42 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:57
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(42): App\Services\Chat->handleSystemMessage(Object(Workerman\Connection\TcpConnection), 'system')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #67)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(59): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 10:37:56 pid:18730 worker[none:18735] exit with status 64000
+2023-04-28 10:39:16 pid:18730 Workerman[worker.php] stopping ...
+2023-04-28 10:39:16 pid:18730 Workerman[worker.php] has been stopped
+2023-04-28 10:39:18 pid:18887 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:39:24 pid:18891 TypeError: App\Services\Chat::sendSystemMessage(): Argument #1 ($message) must be of type array, Workerman\Connection\TcpConnection given, called in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php on line 50 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:81
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php(50): App\Services\Chat->sendSystemMessage(Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/worker.php(32): App\Services\Chat->setOperator(Object(App\Entities\Chat), 1, Object(Workerman\Connection\TcpConnection))
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #103)
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#10 /Users/ivan/Documents/projects/Onlinechat/worker.php(59): Workerman\Worker::runAll()
+#11 {main}
+2023-04-28 10:39:24 pid:18887 worker[none:18891] exit with status 64000
+2023-04-28 10:41:52 pid:18887 Workerman[worker.php] stopping ...
+2023-04-28 10:41:52 pid:18887 Workerman[worker.php] has been stopped
+2023-04-28 10:41:53 pid:18963 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:42:28 pid:18963 Workerman[worker.php] stopping ...
+2023-04-28 10:42:28 pid:18963 Workerman[worker.php] has been stopped
+2023-04-28 10:42:30 pid:18989 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:44:10 pid:18989 Workerman[worker.php] stopping ...
+2023-04-28 10:44:10 pid:18989 Workerman[worker.php] has been stopped
+2023-04-28 10:44:11 pid:19026 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:44:39 pid:19029 Error: Typed property App\Entities\Chat::$operatorConnection must not be accessed before initialization in /Users/ivan/Documents/projects/Onlinechat/worker.php:49
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#6 /Users/ivan/Documents/projects/Onlinechat/worker.php(59): Workerman\Worker::runAll()
+#7 {main}
+2023-04-28 10:44:39 pid:19026 worker[none:19029] exit with status 64000
+2023-04-28 10:45:33 pid:19026 Workerman[worker.php] stopping ...
+2023-04-28 10:45:33 pid:19026 Workerman[worker.php] has been stopped
+2023-04-28 10:45:46 pid:19195 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:46:22 pid:19195 Workerman[worker.php] stopping ...
+2023-04-28 10:46:22 pid:19195 Workerman[worker.php] has been stopped
+2023-04-28 10:46:24 pid:19250 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:46:40 pid:19254 UnhandledMatchError: Unhandled match case 'system' in /Users/ivan/Documents/projects/Onlinechat/app/Controllers/MessageController.php:29
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(44): App\Controllers\MessageController::create('question_closed', 1, 1, 'system')
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(646): {closure}(Object(Workerman\Connection\TcpConnection), Array)
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#7 /Users/ivan/Documents/projects/Onlinechat/worker.php(59): Workerman\Worker::runAll()
+#8 {main}
+2023-04-28 10:46:40 pid:19250 worker[none:19254] exit with status 64000
+2023-04-28 10:47:15 pid:19250 Workerman[worker.php] stopping ...
+2023-04-28 10:47:15 pid:19250 Workerman[worker.php] has been stopped
+2023-04-28 10:47:16 pid:19283 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:48:29 pid:19283 Workerman[worker.php] stopping ...
+2023-04-28 10:48:29 pid:19283 Workerman[worker.php] has been stopped
+2023-04-28 10:48:36 pid:19322 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:51:29 pid:19322 Workerman[worker.php] stopping ...
+2023-04-28 10:51:29 pid:19322 Workerman[worker.php] has been stopped
+2023-04-28 10:51:30 pid:19383 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:53:56 pid:19383 Workerman[worker.php] stopping ...
+2023-04-28 10:53:57 pid:19383 Workerman[worker.php] has been stopped
+2023-04-28 10:53:58 pid:19439 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:57:17 pid:19439 Workerman[worker.php] stopping ...
+2023-04-28 10:57:17 pid:19439 Workerman[worker.php] has been stopped
+2023-04-28 10:57:19 pid:19581 Workerman[worker.php] start in DEBUG mode
+2023-04-28 10:59:11 pid:19581 Workerman[worker.php] stopping ...
+2023-04-28 10:59:11 pid:19581 Workerman[worker.php] has been stopped
+2023-04-28 10:59:21 pid:19639 Workerman[worker.php] start in DEBUG mode
+2023-04-28 11:00:08 pid:19639 Workerman[worker.php] stopping ...
+2023-04-28 11:00:08 pid:19639 Workerman[worker.php] has been stopped
+2023-04-28 11:00:10 pid:19715 Workerman[worker.php] start in DEBUG mode
+2023-04-28 14:23:56 pid:19715 Workerman[worker.php] stopping ...
+2023-04-28 14:23:56 pid:19715 Workerman[worker.php] has been stopped
+2023-04-28 14:23:58 pid:22026 Workerman[worker.php] start in DEBUG mode
+2023-04-28 14:38:16 pid:22026 Workerman[worker.php] stopping ...
+2023-04-28 14:38:16 pid:22026 Workerman[worker.php] has been stopped
+2023-04-28 14:39:15 pid:22441 Workerman[worker.php] start in DEBUG mode
+2023-04-28 14:41:03 pid:22444 App\Exceptions\ChatNotFound: Chat 1 not found. in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:24
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat(1, 1, Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 14:41:03 pid:22441 worker[none:22444] exit with status 64000
+2023-04-28 14:43:41 pid:22441 Workerman[worker.php] stopping ...
+2023-04-28 14:43:41 pid:22441 Workerman[worker.php] has been stopped
+2023-04-28 14:44:18 pid:22562 Workerman[worker.php] start in DEBUG mode
+2023-04-28 14:48:28 pid:22565 TypeError: App\Services\Chat::prepareChat(): Argument #2 ($userId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat(4, 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=4...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=4...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=4...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 14:48:28 pid:22562 worker[none:22565] exit with status 64000
+2023-04-28 14:48:55 pid:22564 TypeError: App\Services\Chat::prepareChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat('undefined', 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=u...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 14:48:55 pid:22562 worker[none:22564] exit with status 64000
+2023-04-28 14:55:53 pid:22655 TypeError: App\Services\Chat::prepareChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat('[object Object]', 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=[...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=[...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=[...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #104)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 14:55:53 pid:22562 worker[none:22655] exit with status 64000
+2023-04-28 14:57:10 pid:22562 Workerman[worker.php] stopping ...
+2023-04-28 14:57:10 pid:22562 Workerman[worker.php] has been stopped
+2023-04-28 14:57:12 pid:22835 Workerman[worker.php] start in DEBUG mode
+2023-04-28 14:57:24 pid:22836 TypeError: App\Services\Chat::prepareChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat('undefined', 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=u...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 14:57:24 pid:22835 worker[none:22836] exit with status 64000
+2023-04-28 14:58:03 pid:22838 TypeError: App\Services\Chat::prepareChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat('undefined', 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=u...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 14:58:03 pid:22835 worker[none:22838] exit with status 64000
+2023-04-28 15:00:19 pid:22847 TypeError: App\Services\Chat::prepareChat(): Argument #2 ($userId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat(8, 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=8...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=8...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=8...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #64)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 15:00:19 pid:22835 worker[none:22847] exit with status 64000
+2023-04-28 15:00:35 pid:22863 TypeError: App\Services\Chat::prepareChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat('undefined', 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=u...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #65)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 15:00:35 pid:22835 worker[none:22863] exit with status 64000
+2023-04-28 15:02:41 pid:22839 TypeError: App\Services\Chat::prepareChat(): Argument #2 ($userId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat(9, 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=9...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=9...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=9...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #63)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(560): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#10 {main}
+2023-04-28 15:02:41 pid:22835 worker[none:22839] exit with status 64000
+2023-04-28 15:05:03 pid:22983 TypeError: App\Services\Chat::prepareChat(): Argument #2 ($userId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat(10, 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #68)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 15:05:03 pid:22835 worker[none:22983] exit with status 64000
+2023-04-28 15:05:18 pid:23011 TypeError: App\Services\Chat::prepareChat(): Argument #1 ($chatId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat('undefined', 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=u...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=u...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #109)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 15:05:18 pid:22835 worker[none:23011] exit with status 64000
+2023-04-28 15:05:19 pid:23014 TypeError: App\Services\Chat::prepareChat(): Argument #2 ($userId) must be of type int, string given, called in /Users/ivan/Documents/projects/Onlinechat/worker.php on line 25 and defined in /Users/ivan/Documents/projects/Onlinechat/app/Services/Chat.php:21
+Stack trace:
+#0 /Users/ivan/Documents/projects/Onlinechat/worker.php(25): App\Services\Chat->prepareChat(11, 'undefined', Object(Workerman\Connection\TcpConnection))
+#1 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(450): {closure}(Object(Workerman\Connection\TcpConnection), 'GET /?chat_id=1...')
+#2 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Protocols/Websocket.php(73): Workerman\Protocols\Websocket::dealHandshake('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#3 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Connection/TcpConnection.php(609): Workerman\Protocols\Websocket::input('GET /?chat_id=1...', Object(Workerman\Connection\TcpConnection))
+#4 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Events/Select.php(311): Workerman\Connection\TcpConnection->baseRead(Resource id #70)
+#5 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1629): Workerman\Events\Select->loop()
+#6 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1423): Workerman\Worker::forkOneWorkerForLinux(Object(Workerman\Worker))
+#7 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1397): Workerman\Worker::forkWorkersForLinux()
+#8 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1779): Workerman\Worker::forkWorkers()
+#9 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(1715): Workerman\Worker::monitorWorkersForLinux()
+#10 /Users/ivan/Documents/projects/Onlinechat/vendor/workerman/workerman/Worker.php(562): Workerman\Worker::monitorWorkers()
+#11 /Users/ivan/Documents/projects/Onlinechat/worker.php(61): Workerman\Worker::runAll()
+#12 {main}
+2023-04-28 15:05:19 pid:22835 worker[none:23014] exit with status 64000
+2023-04-28 15:07:41 pid:22835 Workerman[worker.php] stopping ...
+2023-04-28 15:07:41 pid:22835 Workerman[worker.php] has been stopped
+2023-04-28 15:07:43 pid:23068 Workerman[worker.php] start in DEBUG mode
+2023-04-28 15:08:10 pid:23068 Workerman[worker.php] stopping ...
+2023-04-28 15:08:10 pid:23068 Workerman[worker.php] has been stopped

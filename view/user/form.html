@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>WebSocket Chat</title>
+    <link rel="stylesheet" type="text/css" href="view/style.css">
+</head>
+<body>
+<p>Статус оператора:
+    <span id="online" hidden style="color: green">онлайн</span>
+    <span id="offline" style="color: gray">оффлайн</span>
+</p>
+<div id="chat-box"></div>
+<form id="chat-form">
+    <input type="text" id="message-input" placeholder="Type your message...">
+    <button type="submit">Send</button>
+</form>
+<button id="finish" style="margin-top: 10px" type="submit">Вопрос решен</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="view/script.js"></script>
+<script src="view/user/script.js"></script>
+</body>
+</html>
