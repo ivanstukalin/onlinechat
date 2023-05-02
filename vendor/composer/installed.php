@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => 'e36da75c67e4b4152a1b57052e28f1bbf59eb3cf',
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'reference' => NULL,
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => 'e36da75c67e4b4152a1b57052e28f1bbf59eb3cf',
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'reference' => NULL,
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -34,6 +34,15 @@
             'reference' => 'd9d313a36c872fd6ee06d9a6cbcf713eaa40f024',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/inflector',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'httpsoft/http-emitter' => array(
+            'pretty_version' => '1.0.4',
+            'version' => '1.0.4.0',
+            'reference' => 'd9ab21168b3243a1c4a080698de326c4c92c82b1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../httpsoft/http-emitter',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -127,6 +136,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'laminas/laminas-diactoros' => array(
+            'pretty_version' => '2.25.2',
+            'version' => '2.25.2.0',
+            'reference' => '9f3f4bf5b99c9538b6f1dbcc20f6fec357914f9e',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../laminas/laminas-diactoros',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'nesbot/carbon' => array(
             'pretty_version' => '2.66.0',
             'version' => '2.66.0.0',
@@ -158,6 +176,36 @@
             'dev_requirement' => false,
             'provided' => array(
                 0 => '1.1|2.0',
+            ),
+        ),
+        'psr/http-factory' => array(
+            'pretty_version' => '1.0.2',
+            'version' => '1.0.2.0',
+            'reference' => 'e616d01114759c4c489f93b099585439f795fe35',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-factory',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'psr/http-factory-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
+            ),
+        ),
+        'psr/http-message' => array(
+            'pretty_version' => '1.1',
+            'version' => '1.1.0.0',
+            'reference' => 'cb6ce4845ce34a8ad9e68117c10ee90a29919eba',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/http-message',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'psr/http-message-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -221,9 +269,9 @@
             'dev_requirement' => false,
         ),
         'workerman/workerman' => array(
-            'pretty_version' => 'v4.1.9',
-            'version' => '4.1.9.0',
-            'reference' => '1f92d02c26106b5fbe6f61ea776198aad6e426f7',
+            'pretty_version' => 'v4.1.10',
+            'version' => '4.1.10.0',
+            'reference' => 'e967b79f95b9251a72acb971be05623ec1a51e83',
             'type' => 'library',
             'install_path' => __DIR__ . '/../workerman/workerman',
             'aliases' => array(),

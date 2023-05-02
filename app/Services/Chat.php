@@ -6,7 +6,7 @@ use App\Enums\ChatStatusEnum;
 use App\Enums\MessageTypeEnum;
 use App\Enums\SystemMessageEnum;
 use App\Exceptions\ChatNotFound;
-use App\Exceptions\OperatorDoesNotExist;
+use App\Exceptions\OperatorDoesNotSetForChat;
 use http\Message;
 use Workerman\Connection\TcpConnection;
 use App\Entities;
@@ -32,12 +32,12 @@ class Chat
     }
 
     /**
-     * @throws OperatorDoesNotExist
+     * @throws OperatorDoesNotSetForChat
      */
     public function setOperator(Entities\Chat $chat, int $operatorId, TcpConnection $connection): void
     {
         if (!Models\Operator::query()->where('id', $operatorId)->exists()) {
-            throw new OperatorDoesNotExist($operatorId);
+            throw new OperatorDoesNotSetForChat($operatorId);
         }
 
         /** @var Models\Chat $chatModel */
@@ -84,11 +84,12 @@ class Chat
 
     private function sendSystemMessage(array $message, TcpConnection $connection): void
     {
+        $dateTime = new \DateTime();
         try {
             $connection->send(json_encode($message));
-            echo "Отправил системное сообщение \n";
+            echo "{$dateTime->format('h:i:s')}: Отправил системное сообщение \n";
         } catch (\Throwable $exception) {
-            echo "Системноее сообщение не было отправлено: {$exception->getMessage()}";
+            echo "{$dateTime->format('h:i:s')}: Системноее сообщение не было отправлено: {$exception->getMessage()}";
         }
     }
 }

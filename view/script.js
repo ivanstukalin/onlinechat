@@ -1,43 +1,49 @@
 function loadMessagesByChat(id) {
-    $.get("/chat/messages?id=" + id, function(data) {
-        let response = JSON.parse(data);
-        if (response.status !== 200) {
-            console.log(response.message)
-            return;
-        }
-        messages = JSON.parse(response.body);
-        if (messages.length > 0) {
-            setMessagesList(messages)
-        }
+    $.ajax({
+        type: 'GET',
+        url: "/chat/messages?id=" + id,
+        dataType: "json",
+        success: function(data) {
+            if (data.length > 0) {
+                setMessagesList(data)
+            }
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
+        },
     });
 }
 
 function loadChat(id) {
-    return $.get("chat?id=" + id, function(data){
-        let response = JSON.parse(data)
-        if (response.status !== 200) {
-            console.log(response.message)
-            createChat()
-            return;
-        }
-        chat = JSON.parse(response.body)
-        return chat;
+    $.ajax({
+        type: 'GET',
+        url: "chat?id=" + id,
+        dataType: "json",
+        success: function(data) {
+            chat = data
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
+        },
     });
 }
 
 function createChat() {
-    $.post(
-        "chat/create",
-        {},
-        function(data) {
-            let response = JSON.parse(data)
-            if (response.status === 200) {
-                chat = JSON.parse(response.body)
-                document.cookie = "chat_id="+ chat.id;
-            } else {
-                console.log(response.message)
-            }
-        });
+    return $.ajax({
+        type: 'POST',
+        url: "chat/create",
+        data: {},
+        dataType: "json",
+        success: function(data) {
+            chat = data
+            document.cookie = "chat_id="+ chat.id;
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
+        },
+    }).done(function (data) {
+        return data
+    });
 }
 
 function setMessagesList(messages) {
@@ -53,13 +59,16 @@ function getCookie(name) {
 }
 
 function loadOperator(id) {
-    $.get("operator?id=" + id, function(data){
-        let response = JSON.parse(data);
-        if (response.status !== 200) {
-            console.log(response.message);
+    $.ajax({
+        type: 'GET',
+        url: "operator?id=" + id,
+        dataType: "json",
+        success: function(data) {
+            operator = data;
+            },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
             document.getElementById('message-input').hidden = true;
-            return;
-        }
-        operator = JSON.parse(response.body);
+        },
     });
 }

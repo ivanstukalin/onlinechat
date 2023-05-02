@@ -10,7 +10,6 @@ use App\Services;
 use App\Enums;
 
 $worker        = new Worker('websocket://0.0.0.0:2346');
-$worker->reloadable = false;
 $worker->count = 4;
 $chats         = [];
 $chatService   = new Services\Chat();
@@ -22,7 +21,7 @@ $worker->onConnect = function ($connection) use (&$chatService, &$chats, &$test)
         $chat   = $chats[$chatId] ?? null;
         echo "Кол-во чатов: " . count($chats) . "\n";
         if (is_null($chat) && !is_null($userId)) {
-            $chats[$chatId] = $chatService->prepareChat($chatId, $userId, $connection);
+            $chats[$chatId] = $chatService->prepareChat((int)$chatId, (int)$userId, $connection);
         }
         echo "Кол-во чатов: " . count($chats) . "\n";
 
@@ -52,7 +51,7 @@ $worker->onMessage = function ($connection, $data) use (&$chats, &$chatService):
     }
     $connectionToSend = match ($message->type) {
         Enums\MessageTypeEnum::User => $chat->operatorConnection,
-        Enums\MessageTypeEnum::Operator => $chat->userConnection
+        Enums\MessageTypeEnum::Operator => $chat->userConnection,
     };
     $chatService->sendMessage($connectionToSend, $message);
 };

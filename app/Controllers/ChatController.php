@@ -4,18 +4,18 @@ namespace App\Controllers;
 
 use App\Enums\ChatStatusEnum;
 use App\Exceptions\ChatNotFound;
+use App\Exceptions\OperatorDoesNotSetForChat;
 use App\Models\Chat;
 use App\Models\Message;
 use App\Models\Operator;
 use App\Models\User;
+use Psr\Http\Message\ServerRequestInterface;
 
 class ChatController
 {
-    static public function get(int $chatId): Chat
+    static public function get(ServerRequestInterface $request): Chat
     {
-        $chat = self::getChat($chatId);
-
-        return $chat;
+        return self::getChatFromRequest($request);
     }
 
     static public function listActive(): array
@@ -23,23 +23,29 @@ class ChatController
         return Chat::query()->get()->where('status', ChatStatusEnum::Active->value)->toArray();
     }
 
-    static public function getUser(int $chatId): User
+    static public function getUser(ServerRequestInterface $request): User
     {
-        $chat = self::getChat($chatId);
+        $chat = self::getChatFromRequest($request);
 
         return User::query()->where('id', $chat->user_id)->get()->first();
     }
 
-    static public function getOperator(int $chatId): Operator
+    static public function getOperator(ServerRequestInterface $request): Operator
     {
-        $chat = self::getChat($chatId);
+        $chat     = self::getChatFromRequest($request);
+        $operator = Operator::query()->where('id', $chat->operator_id)->get()->first();
 
-        return Operator::query()->where('id', $chat->operator_id)->get()->first();
+        if (is_null($operator)) {
+            throw new OperatorDoesNotSetForChat($chat->id);
+
+
+        }
+        return $operator;
     }
 
-    static public function getMessages(int $chatId): array
+    static public function getMessages(ServerRequestInterface $request): array
     {
-        $chat = self::getChat($chatId);
+        $chat = self::getChatFromRequest($request);
 
         return Message::query()->where('chat_id', $chat->id)->get()->toArray();
     }
@@ -63,5 +69,9 @@ class ChatController
         }
 
         return $chat;
+    }
+
+    static private function getChatFromRequest(ServerRequestInterface $request): Chat {
+        return self::getChat((int)$request->getQueryParams()['id']);
     }
 }

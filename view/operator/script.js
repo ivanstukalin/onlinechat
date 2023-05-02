@@ -40,37 +40,50 @@ if (user_id === undefined) {
     loadUserByChat(chat_id)
 }
 
-loadMessagesByChat(chat_id);
+if (chat_id !== undefined) {
+    loadMessagesByChat(chat_id);
+}
 
-const socket = new WebSocket('ws://localhost:2346/?chat_id=' + chat_id + '&operator_id=' + operator_id);
+setTimeout(checkStatus, 1000);
 
-socket.addEventListener('open', event => {
-    console.log('Connected to WebSocket server');
-});
+function checkStatus() {
+    if (chat !== undefined && chat.status === 'closed') {
+        document.getElementById('active').hidden = true;
+        document.getElementById('done').hidden = false;
 
-socket.addEventListener('message', event => {
-    const message = JSON.parse(event.data);
-    sound.play();
-    console.log(message)
-    if (message.type === 'system') {
-        handleSystemMessage(message)
-    } else {
-        addMessageToChatBox(message);
     }
-});
+}
 
-chatForm.addEventListener('submit', event => {
-    event.preventDefault();
-    const message = {
-        text: messageInput.value,
-        senders_id: operator.id,
-        type: 'operator',
-        chat_id: chat_id
-    };
-    socket.send(JSON.stringify(message));
-    addMessageToChatBox(message);
-    messageInput.value = '';
-});
+if (chat_id !== null) {
+    const socket = new WebSocket('ws://localhost:2346/?chat_id=' + chat_id + '&operator_id=' + operator_id);
+
+    socket.addEventListener('open', event => {
+        console.log('Connected to WebSocket server');
+    });
+
+    socket.addEventListener('message', event => {
+        const message = JSON.parse(event.data);
+        sound.play();
+        if (message.type === 'system') {
+            handleSystemMessage(message)
+        } else {
+            addMessageToChatBox(message);
+        }
+    });
+
+    chatForm.addEventListener('submit', event => {
+        event.preventDefault();
+        const message = {
+            text: messageInput.value,
+            senders_id: operator.id,
+            type: 'operator',
+            chat_id: chat_id
+        };
+        socket.send(JSON.stringify(message));
+        addMessageToChatBox(message);
+        messageInput.value = '';
+    });
+}
 
 function addMessageToChatBox(message) {
     const messageElement = document.createElement('div');
@@ -84,13 +97,16 @@ function addMessageToChatBox(message) {
 }
 
 function loadUserByChat(id) {
-    $.get("chat/user?id=" + id, function(data) {
-        let response = JSON.parse(data);
-        if (response.status !== 200) {
-            console.log(response.message);
-            return;
-        }
-        user = JSON.parse(response.body);
+    $.ajax({
+        type: 'GET',
+        url: "chat/user?id=" + id,
+        dataType: "json",
+        success: function(data) {
+            user = data;
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
+        },
     });
 }
 
@@ -106,14 +122,17 @@ function handleSystemMessage(message) {
 }
 
 function loadChats() {
-    $.get("chats/active", function(data) {
-        let response = JSON.parse(data);
-        if (response.status !== 200) {
-            console.log(response.message);
-            return;
-        }
-        chats = JSON.parse(response.body);
-        showChats(chats)
+    $.ajax({
+        type: 'GET',
+        url: "chats/active",
+        dataType: "json",
+        success: function(data) {
+            chats = data;
+            showChats(chats)
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log(jqXHR.responseText);
+        },
     });
 }
 
@@ -126,3 +145,4 @@ function showChats(chats) {
         select.appendChild(chat);
     }
 }
+

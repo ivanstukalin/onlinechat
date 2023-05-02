@@ -6,7 +6,7 @@ use App\Exceptions\ChatNotFound;
 use App\Exceptions\UserNotFound;
 use App\Models\Chat;
 use App\Models\User;
-use Illuminate\Database\Capsule\Manager as DB;
+use Psr\Http\Message\ServerRequestInterface;
 
 class UserController
 {
@@ -15,9 +15,10 @@ class UserController
     /**
      * @throws UserNotFound
      */
-    static public function get(int $userId): User
+    static public function get(ServerRequestInterface $request): User
     {
-        $user = User::query()->where('id', $userId)->get()->first();
+        $userId = $request->getQueryParams()['id'];
+        $user   = User::query()->where('id', $userId)->get()->first();
 
         if (is_null($user)) {
             throw new UserNotFound($userId);
@@ -29,10 +30,11 @@ class UserController
     /**
      * @throws \Exception
      */
-    static public function create(int $chatId): User
+    static public function create(ServerRequestInterface $request): User
     {
+        $chatId = $request->getParsedBody()['chat_id'];
         /** @var Chat $chat */
-        $chat = Chat::query()->where('id', $chatId)->get()->first();
+        $chat  = Chat::query()->where('id', $chatId)->get()->first();
 
         if (is_null($chat)) {
             throw new ChatNotFound($chatId);

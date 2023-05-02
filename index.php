@@ -5,84 +5,80 @@ require 'app/autoload.php';
 
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\Dispatcher;
+use Laminas\Diactoros\ServerRequestFactory;
+use Laminas\Diactoros\Response;
+use HttpSoft\Emitter\SapiEmitter;
+
+$request = ServerRequestFactory::fromGlobals();
 
 function processInput(string $uri): string
 {
-    $uri = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
-
-    return $uri;
+    return urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 }
 
-function processOutput(array $response): void
+function processOutput(Response $response): void
 {
-    echo json_encode($response);
+    $emitter = new SapiEmitter();
+    $emitter->emit($response);
 }
 
 $router = new RouteCollector();
 
 $router->get('/', function(){
-    echo file_get_contents('view/index.html');
-    die();
+    return new Response\HtmlResponse(file_get_contents('view/index.html'));
 });
 
 $router->get('/support', function(){
-    echo file_get_contents('view/user/form.html');
-    die();
+    return new Response\HtmlResponse(file_get_contents('view/user/form.html'));
 });
 
 $router->get('/help', function(){
-    echo file_get_contents('view/operator/form.html');
-    die();
+    return new Response\HtmlResponse(file_get_contents('view/operator/form.html'));
 });
 
-$router->get('/user', function(){
-    return json_encode(\App\Controllers\UserController::get($_GET['id']));
+$router->get('/user', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\UserController::get($request),);
 });
 
-$router->get('/operator', function(){
-    return json_encode(\App\Controllers\OperatorController::get($_GET['id']));
+$router->post('/user/create', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\UserController::create($request));
 });
 
-$router->get('/chats/active', function(){
-    return json_encode(\App\Controllers\ChatController::listActive());
+$router->get('/operator', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\OperatorController::get($request));
 });
 
-$router->get('/chat', function(){
-    return json_encode(\App\Controllers\ChatController::get((int)$_GET['id']));
+
+$router->get('/chat', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\ChatController::get($request));
 });
 
-$router->get('/chat/user', function(){
-    return json_encode(\App\Controllers\ChatController::getUser((int)$_GET['id']));
+$router->post('/chat/create', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\ChatController::create());
 });
 
-$router->get('/chat/operator', function(){
-    return json_encode(\App\Controllers\ChatController::getOperator((int)$_GET['id']));
+$router->get('/chats/active', function() {
+    return new Response\JsonResponse(\App\Controllers\ChatController::listActive());
 });
 
-$router->get('/chat/messages', function(){
-    return json_encode(\App\Controllers\ChatController::getMessages((int)$_GET['id']));
+$router->get('/chat/user', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\ChatController::getUser($request));
 });
 
-$router->post('/user/create', function() {
-    return json_encode(\App\Controllers\UserController::create($_POST['chat_id']));
+$router->get('/chat/operator', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\ChatController::getOperator($request));
 });
 
-$router->post('/chat/create', function() {
-    return json_encode(\App\Controllers\ChatController::create());
+$router->get('/chat/messages', function() use ($request) {
+    return new Response\JsonResponse(\App\Controllers\ChatController::getMessages($request));
 });
 
 $dispatcher = new Dispatcher($router->getData());
 
 try {
-    $response = [
-        'body' => $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], processInput($_SERVER['REQUEST_URI'])),
-        'status' => 200,
-    ];
+    $response = $dispatcher->dispatch($_SERVER['REQUEST_METHOD'], processInput($_SERVER['REQUEST_URI']));
 } catch (Throwable $e) {
-    $response = [
-        'status'  => $e->getCode(),
-        'message' => $e->getMessage(),
-    ];
+    $response = new Response\TextResponse($e->getMessage(), 400);
 }
 
 processOutput($response);
